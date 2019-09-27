@@ -18,6 +18,7 @@ namespace PDFPlugin
             InitializeComponent();
         }
 
+        // TODO 1a: implement function to sort items in lbItems1 DONE
         private void btnSortItem1_Click(object sender, EventArgs e)
         {
             var items = lbItem1.Items.Cast<dynamic>().ToList();
@@ -28,7 +29,9 @@ namespace PDFPlugin
                 lbItem1.Items.Add(item);
             }
         }
-        // TODO 2: Implement function for load items to items1, DONE
+        // TODO 1b: imeplement function to sort items in lbItems2
+
+        // TODO 2a: Implement function for load items to items1, DONE
         private void folderAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (_ofd = new OpenFileDialog())
@@ -43,7 +46,7 @@ namespace PDFPlugin
                 }
             }
         }
-        // TODO 3: Implement function for load items to items2, DONE
+        // TODO 2b: Implement function for load items to items2, DONE
         private void folderBToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (_ofd = new OpenFileDialog())
@@ -58,9 +61,11 @@ namespace PDFPlugin
                 }
             }
         }
-        // TODO 4: Implement function for remove items from items1
-        // TODO 5: impelment function for remove items from items2
-        // TODO 6: implement function for process button
-        // TODO 7 optional: implement function to sort different ways
+        // TODO 3: Implement function for remove items from items1
+        // TODO 4: impelment function for remove items from items2
+        // TODO 5: implement function for process button
+        // TODO 6 optional: implement function to sort different ways
+        // TODO 7: create a method to update all the items
+        // TODO 8: create a method to update the UI
     }
 }

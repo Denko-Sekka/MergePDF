@@ -30,10 +30,10 @@
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.flp3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbResults = new System.Windows.Forms.ListBox();
             this.flp2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tlp2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbItem2 = new System.Windows.Forms.ListBox();
             this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSortItem2 = new System.Windows.Forms.Button();
@@ -52,9 +52,9 @@
             this.btnProcessResults = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.flp3.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tlp3.SuspendLayout();
             this.flp2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlp2.SuspendLayout();
             this.flpItem2Buttons.SuspendLayout();
             this.flp1.SuspendLayout();
             this.tlp1.SuspendLayout();
@@ -84,26 +84,27 @@
             // flp3
             // 
             this.flp3.BackColor = System.Drawing.SystemColors.Control;
-            this.flp3.Controls.Add(this.tableLayoutPanel2);
+            this.flp3.Controls.Add(this.tlp3);
             this.flp3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp3.Location = new System.Drawing.Point(601, 3);
             this.flp3.Name = "flp3";
             this.flp3.Size = new System.Drawing.Size(293, 329);
             this.flp3.TabIndex = 3;
             // 
-            // tableLayoutPanel2
+            // tlp3
             // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.lbResults, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(292, 341);
-            this.tableLayoutPanel2.TabIndex = 1;
+            this.tlp3.AutoSize = true;
+            this.tlp3.ColumnCount = 1;
+            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp3.Controls.Add(this.lbResults, 0, 1);
+            this.tlp3.Controls.Add(this.flowLayoutPanel1, 0, 0);
+            this.tlp3.Location = new System.Drawing.Point(3, 3);
+            this.tlp3.Name = "tlp3";
+            this.tlp3.RowCount = 2;
+            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp3.Size = new System.Drawing.Size(287, 341);
+            this.tlp3.TabIndex = 1;
             // 
             // lbResults
             // 
@@ -111,33 +112,34 @@
             this.lbResults.FormattingEnabled = true;
             this.lbResults.Location = new System.Drawing.Point(3, 43);
             this.lbResults.Name = "lbResults";
-            this.lbResults.Size = new System.Drawing.Size(286, 295);
+            this.lbResults.Size = new System.Drawing.Size(281, 295);
             this.lbResults.TabIndex = 0;
             // 
             // flp2
             // 
             this.flp2.BackColor = System.Drawing.SystemColors.Control;
-            this.flp2.Controls.Add(this.tableLayoutPanel1);
+            this.flp2.Controls.Add(this.tlp2);
             this.flp2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp2.Location = new System.Drawing.Point(302, 3);
             this.flp2.Name = "flp2";
             this.flp2.Size = new System.Drawing.Size(293, 329);
             this.flp2.TabIndex = 2;
             // 
-            // tableLayoutPanel1
+            // tlp2
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.lbItem2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.flpItem2Buttons, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(289, 341);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.tlp2.AutoScroll = true;
+            this.tlp2.ColumnCount = 1;
+            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp2.Controls.Add(this.lbItem2, 0, 1);
+            this.tlp2.Controls.Add(this.flpItem2Buttons, 0, 0);
+            this.tlp2.Location = new System.Drawing.Point(3, 3);
+            this.tlp2.Name = "tlp2";
+            this.tlp2.RowCount = 2;
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlp2.Size = new System.Drawing.Size(289, 341);
+            this.tlp2.TabIndex = 1;
             // 
             // lbItem2
             // 
@@ -188,6 +190,7 @@
             // 
             // tlp1
             // 
+            this.tlp1.AutoScroll = true;
             this.tlp1.ColumnCount = 1;
             this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tlp1.Controls.Add(this.lbItem1, 0, 1);
@@ -278,7 +281,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(283, 34);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 34);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // btnProcessResults
@@ -304,9 +307,10 @@
             this.Text = "PDFPluginApp";
             this.tlpMain.ResumeLayout(false);
             this.flp3.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
+            this.flp3.PerformLayout();
+            this.tlp3.ResumeLayout(false);
             this.flp2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tlp2.ResumeLayout(false);
             this.flpItem2Buttons.ResumeLayout(false);
             this.flp1.ResumeLayout(false);
             this.tlp1.ResumeLayout(false);
@@ -325,9 +329,9 @@
         private System.Windows.Forms.FlowLayoutPanel flp3;
         private System.Windows.Forms.FlowLayoutPanel flp2;
         private System.Windows.Forms.FlowLayoutPanel flp1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tlp3;
         private System.Windows.Forms.ListBox lbResults;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tlp2;
         private System.Windows.Forms.ListBox lbItem2;
         private System.Windows.Forms.TableLayoutPanel tlp1;
         private System.Windows.Forms.ListBox lbItem1;
