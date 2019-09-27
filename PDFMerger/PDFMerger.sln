@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFMerger", "PDFMerger\PDFMerger.csproj", "{99B93ABC-3877-4267-8D9A-5DB00F09B6C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "PDFMerger\MainApp.csproj", "{99B93ABC-3877-4267-8D9A-5DB00F09B6C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "ClassLibrary1\PluginInterface.csproj", "{719C4E77-BD0C-4CB9-A404-783E73A8FF90}"
 EndProject

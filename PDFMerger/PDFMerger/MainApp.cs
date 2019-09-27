@@ -18,8 +18,14 @@ namespace PDFMerger
         {
             InitializeComponent();
             _plugins = new Dictionary<string, IPlugin>();
-            
 
+            // We grab all the DLLs available in the plugins forlder
+            ICollection<IPlugin> plugins = PluginLoader.LoadPlugin(System.IO.Path.GetFullPath(@"..\..\Plugins"));
+            foreach (var item in plugins)
+            {
+                _plugins.Add(item.PluginName, item);
+                flpMain.Controls.Add((UserControl)item.UC);
+            }
         }
         // TODO - the main app and plugin contract has been added. add a way to read the plugins from a path
     }
