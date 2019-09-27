@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApp", "PDFMerger\MainAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "ClassLibrary1\PluginInterface.csproj", "{719C4E77-BD0C-4CB9-A404-783E73A8FF90}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFPlugin", "PDFPlugin\PDFPlugin.csproj", "{B12FCF54-7671-4AB2-BE24-6305C0C401C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{719C4E77-BD0C-4CB9-A404-783E73A8FF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{719C4E77-BD0C-4CB9-A404-783E73A8FF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{719C4E77-BD0C-4CB9-A404-783E73A8FF90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12FCF54-7671-4AB2-BE24-6305C0C401C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12FCF54-7671-4AB2-BE24-6305C0C401C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12FCF54-7671-4AB2-BE24-6305C0C401C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12FCF54-7671-4AB2-BE24-6305C0C401C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

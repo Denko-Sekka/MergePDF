@@ -19,8 +19,10 @@ namespace PDFMerger
             InitializeComponent();
             _plugins = new Dictionary<string, IPlugin>();
 
-            // We grab all the DLLs available in the plugins forlder
-            ICollection<IPlugin> plugins = PluginLoader.LoadPlugin(System.IO.Path.GetFullPath(@"..\..\Plugins"));
+            // grab all the DLLs available in the plugins forlder
+            ICollection<IPlugin> plugins = PluginLoader.LoadPlugin(System.IO.Path.GetFullPath(@"..\..\Plugin"));
+            
+            // Add each User control to the main form
             foreach (var item in plugins)
             {
                 _plugins.Add(item.PluginName, item);
