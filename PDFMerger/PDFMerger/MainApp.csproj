@@ -86,7 +86,9 @@
       <Name>PluginInterface</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Results\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Plugin\READ ME.txt" />
   </ItemGroup>

@@ -32,6 +32,8 @@
             this.flp3 = new System.Windows.Forms.FlowLayoutPanel();
             this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbResults = new System.Windows.Forms.ListBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnProcessResults = new System.Windows.Forms.Button();
             this.flp2 = new System.Windows.Forms.FlowLayoutPanel();
             this.tlp2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbItem2 = new System.Windows.Forms.ListBox();
@@ -48,11 +50,10 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnProcessResults = new System.Windows.Forms.Button();
             this.tlpMain.SuspendLayout();
             this.flp3.SuspendLayout();
             this.tlp3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.flp2.SuspendLayout();
             this.tlp2.SuspendLayout();
             this.flpItem2Buttons.SuspendLayout();
@@ -60,7 +61,6 @@
             this.tlp1.SuspendLayout();
             this.flpItem1Buttons.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -115,6 +115,25 @@
             this.lbResults.Size = new System.Drawing.Size(281, 295);
             this.lbResults.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 34);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // btnProcessResults
+            // 
+            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
+            this.btnProcessResults.Name = "btnProcessResults";
+            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
+            this.btnProcessResults.TabIndex = 1;
+            this.btnProcessResults.Text = "Process";
+            this.btnProcessResults.UseVisualStyleBackColor = true;
+            this.btnProcessResults.Click += new System.EventHandler(this.btnProcessResults_Click);
+            // 
             // flp2
             // 
             this.flp2.BackColor = System.Drawing.SystemColors.Control;
@@ -168,6 +187,7 @@
             this.btnSortItem2.TabIndex = 1;
             this.btnSortItem2.Text = "Sort";
             this.btnSortItem2.UseVisualStyleBackColor = true;
+            this.btnSortItem2.Click += new System.EventHandler(this.btnSortItem2_Click);
             // 
             // btnRemoveItem2
             // 
@@ -177,6 +197,7 @@
             this.btnRemoveItem2.TabIndex = 2;
             this.btnRemoveItem2.Text = "Remove";
             this.btnRemoveItem2.UseVisualStyleBackColor = true;
+            this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem2_Click);
             // 
             // flp1
             // 
@@ -241,6 +262,7 @@
             this.btnRemoveItem1.TabIndex = 3;
             this.btnRemoveItem1.Text = "Remove";
             this.btnRemoveItem1.UseVisualStyleBackColor = true;
+            this.btnRemoveItem1.Click += new System.EventHandler(this.btnRemoveItem1_Click);
             // 
             // menuStrip1
             // 
@@ -275,24 +297,6 @@
             this.folderBToolStripMenuItem.Text = "Folder B";
             this.folderBToolStripMenuItem.Click += new System.EventHandler(this.folderBToolStripMenuItem_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 34);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // btnProcessResults
-            // 
-            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
-            this.btnProcessResults.Name = "btnProcessResults";
-            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
-            this.btnProcessResults.TabIndex = 1;
-            this.btnProcessResults.Text = "Process";
-            this.btnProcessResults.UseVisualStyleBackColor = true;
-            // 
             // PDFPluginApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +313,7 @@
             this.flp3.ResumeLayout(false);
             this.flp3.PerformLayout();
             this.tlp3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.flp2.ResumeLayout(false);
             this.tlp2.ResumeLayout(false);
             this.flpItem2Buttons.ResumeLayout(false);
@@ -317,7 +322,6 @@
             this.flpItem1Buttons.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
