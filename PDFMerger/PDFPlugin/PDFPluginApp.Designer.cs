@@ -30,19 +30,8 @@
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.flp3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tlp3 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbResults = new System.Windows.Forms.ListBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnProcessResults = new System.Windows.Forms.Button();
             this.flp2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tlp2 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbItem2 = new System.Windows.Forms.ListBox();
-            this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSortItem2 = new System.Windows.Forms.Button();
-            this.btnRemoveItem2 = new System.Windows.Forms.Button();
             this.flp1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.tlp1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbItem1 = new System.Windows.Forms.ListBox();
             this.flpItem1Buttons = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSortItem1 = new System.Windows.Forms.Button();
             this.btnRemoveItem1 = new System.Windows.Forms.Button();
@@ -50,192 +39,80 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbItem2 = new System.Windows.Forms.ListBox();
+            this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSortItem2 = new System.Windows.Forms.Button();
+            this.btnRemoveItem2 = new System.Windows.Forms.Button();
+            this.lbResults = new System.Windows.Forms.ListBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnProcessResults = new System.Windows.Forms.Button();
+            this.lbItem1 = new System.Windows.Forms.ListBox();
             this.tlpMain.SuspendLayout();
             this.flp3.SuspendLayout();
-            this.tlp3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.flp2.SuspendLayout();
-            this.tlp2.SuspendLayout();
-            this.flpItem2Buttons.SuspendLayout();
             this.flp1.SuspendLayout();
-            this.tlp1.SuspendLayout();
             this.flpItem1Buttons.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.flpItem2Buttons.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
             // 
-            this.tlpMain.ColumnCount = 3;
+            this.tlpMain.ColumnCount = 5;
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tlpMain.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tlpMain.Controls.Add(this.flp3, 2, 0);
-            this.tlpMain.Controls.Add(this.flp2, 1, 0);
+            this.tlpMain.Controls.Add(this.flp3, 4, 0);
+            this.tlpMain.Controls.Add(this.flp2, 2, 0);
             this.tlpMain.Controls.Add(this.flp1, 0, 0);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 24);
             this.tlpMain.Name = "tlpMain";
             this.tlpMain.RowCount = 1;
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 335F));
-            this.tlpMain.Size = new System.Drawing.Size(897, 335);
+            this.tlpMain.Size = new System.Drawing.Size(1001, 345);
             this.tlpMain.TabIndex = 0;
             // 
             // flp3
             // 
             this.flp3.BackColor = System.Drawing.SystemColors.Control;
-            this.flp3.Controls.Add(this.tlp3);
+            this.flp3.Controls.Add(this.flowLayoutPanel1);
+            this.flp3.Controls.Add(this.lbResults);
             this.flp3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp3.Location = new System.Drawing.Point(601, 3);
+            this.flp3.Location = new System.Drawing.Point(703, 3);
             this.flp3.Name = "flp3";
-            this.flp3.Size = new System.Drawing.Size(293, 329);
+            this.flp3.Size = new System.Drawing.Size(295, 339);
             this.flp3.TabIndex = 3;
-            // 
-            // tlp3
-            // 
-            this.tlp3.AutoSize = true;
-            this.tlp3.ColumnCount = 1;
-            this.tlp3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp3.Controls.Add(this.lbResults, 0, 1);
-            this.tlp3.Controls.Add(this.flowLayoutPanel1, 0, 0);
-            this.tlp3.Location = new System.Drawing.Point(3, 3);
-            this.tlp3.Name = "tlp3";
-            this.tlp3.RowCount = 2;
-            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp3.Size = new System.Drawing.Size(287, 341);
-            this.tlp3.TabIndex = 1;
-            // 
-            // lbResults
-            // 
-            this.lbResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbResults.FormattingEnabled = true;
-            this.lbResults.Location = new System.Drawing.Point(3, 43);
-            this.lbResults.Name = "lbResults";
-            this.lbResults.Size = new System.Drawing.Size(281, 295);
-            this.lbResults.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(281, 34);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // btnProcessResults
-            // 
-            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
-            this.btnProcessResults.Name = "btnProcessResults";
-            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
-            this.btnProcessResults.TabIndex = 1;
-            this.btnProcessResults.Text = "Process";
-            this.btnProcessResults.UseVisualStyleBackColor = true;
-            this.btnProcessResults.Click += new System.EventHandler(this.btnProcessResults_Click);
             // 
             // flp2
             // 
             this.flp2.BackColor = System.Drawing.SystemColors.Control;
-            this.flp2.Controls.Add(this.tlp2);
+            this.flp2.Controls.Add(this.flpItem2Buttons);
+            this.flp2.Controls.Add(this.lbItem2);
             this.flp2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flp2.Location = new System.Drawing.Point(302, 3);
+            this.flp2.Location = new System.Drawing.Point(353, 3);
             this.flp2.Name = "flp2";
-            this.flp2.Size = new System.Drawing.Size(293, 329);
+            this.flp2.Size = new System.Drawing.Size(294, 339);
             this.flp2.TabIndex = 2;
-            // 
-            // tlp2
-            // 
-            this.tlp2.AutoScroll = true;
-            this.tlp2.ColumnCount = 1;
-            this.tlp2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp2.Controls.Add(this.lbItem2, 0, 1);
-            this.tlp2.Controls.Add(this.flpItem2Buttons, 0, 0);
-            this.tlp2.Location = new System.Drawing.Point(3, 3);
-            this.tlp2.Name = "tlp2";
-            this.tlp2.RowCount = 2;
-            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp2.Size = new System.Drawing.Size(289, 341);
-            this.tlp2.TabIndex = 1;
-            // 
-            // lbItem2
-            // 
-            this.lbItem2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbItem2.FormattingEnabled = true;
-            this.lbItem2.Location = new System.Drawing.Point(3, 43);
-            this.lbItem2.Name = "lbItem2";
-            this.lbItem2.Size = new System.Drawing.Size(283, 295);
-            this.lbItem2.TabIndex = 0;
-            // 
-            // flpItem2Buttons
-            // 
-            this.flpItem2Buttons.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flpItem2Buttons.Controls.Add(this.btnSortItem2);
-            this.flpItem2Buttons.Controls.Add(this.btnRemoveItem2);
-            this.flpItem2Buttons.Location = new System.Drawing.Point(3, 3);
-            this.flpItem2Buttons.Name = "flpItem2Buttons";
-            this.flpItem2Buttons.Size = new System.Drawing.Size(283, 34);
-            this.flpItem2Buttons.TabIndex = 1;
-            // 
-            // btnSortItem2
-            // 
-            this.btnSortItem2.Location = new System.Drawing.Point(3, 3);
-            this.btnSortItem2.Name = "btnSortItem2";
-            this.btnSortItem2.Size = new System.Drawing.Size(75, 23);
-            this.btnSortItem2.TabIndex = 1;
-            this.btnSortItem2.Text = "Sort";
-            this.btnSortItem2.UseVisualStyleBackColor = true;
-            this.btnSortItem2.Click += new System.EventHandler(this.btnSortItem2_Click);
-            // 
-            // btnRemoveItem2
-            // 
-            this.btnRemoveItem2.Location = new System.Drawing.Point(84, 3);
-            this.btnRemoveItem2.Name = "btnRemoveItem2";
-            this.btnRemoveItem2.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveItem2.TabIndex = 2;
-            this.btnRemoveItem2.Text = "Remove";
-            this.btnRemoveItem2.UseVisualStyleBackColor = true;
-            this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem2_Click);
             // 
             // flp1
             // 
             this.flp1.BackColor = System.Drawing.SystemColors.Control;
-            this.flp1.Controls.Add(this.tlp1);
+            this.flp1.Controls.Add(this.flpItem1Buttons);
+            this.flp1.Controls.Add(this.lbItem1);
             this.flp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp1.Location = new System.Drawing.Point(3, 3);
             this.flp1.Name = "flp1";
-            this.flp1.Size = new System.Drawing.Size(293, 329);
+            this.flp1.Size = new System.Drawing.Size(294, 339);
             this.flp1.TabIndex = 1;
-            // 
-            // tlp1
-            // 
-            this.tlp1.AutoScroll = true;
-            this.tlp1.ColumnCount = 1;
-            this.tlp1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp1.Controls.Add(this.lbItem1, 0, 1);
-            this.tlp1.Controls.Add(this.flpItem1Buttons, 0, 0);
-            this.tlp1.Location = new System.Drawing.Point(3, 3);
-            this.tlp1.Name = "tlp1";
-            this.tlp1.RowCount = 2;
-            this.tlp1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tlp1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlp1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tlp1.Size = new System.Drawing.Size(289, 341);
-            this.tlp1.TabIndex = 0;
-            // 
-            // lbItem1
-            // 
-            this.lbItem1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbItem1.FormattingEnabled = true;
-            this.lbItem1.Location = new System.Drawing.Point(3, 43);
-            this.lbItem1.Name = "lbItem1";
-            this.lbItem1.Size = new System.Drawing.Size(283, 295);
-            this.lbItem1.TabIndex = 0;
             // 
             // flpItem1Buttons
             // 
+            this.flpItem1Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpItem1Buttons.BackColor = System.Drawing.SystemColors.Highlight;
             this.flpItem1Buttons.Controls.Add(this.btnSortItem1);
             this.flpItem1Buttons.Controls.Add(this.btnRemoveItem1);
@@ -252,7 +129,7 @@
             this.btnSortItem1.TabIndex = 0;
             this.btnSortItem1.Text = "Sort";
             this.btnSortItem1.UseVisualStyleBackColor = true;
-            this.btnSortItem1.Click += new System.EventHandler(this.btnSortItem1_Click);
+            this.btnSortItem1.Click += new System.EventHandler(this.btnSortItem_Click);
             // 
             // btnRemoveItem1
             // 
@@ -262,7 +139,7 @@
             this.btnRemoveItem1.TabIndex = 3;
             this.btnRemoveItem1.Text = "Remove";
             this.btnRemoveItem1.UseVisualStyleBackColor = true;
-            this.btnRemoveItem1.Click += new System.EventHandler(this.btnRemoveItem1_Click);
+            this.btnRemoveItem1.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // menuStrip1
             // 
@@ -270,7 +147,7 @@
             this.fileToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(897, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1001, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -286,23 +163,106 @@
             // folderAToolStripMenuItem
             // 
             this.folderAToolStripMenuItem.Name = "folderAToolStripMenuItem";
-            this.folderAToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.folderAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.folderAToolStripMenuItem.Text = "Folder A";
-            this.folderAToolStripMenuItem.Click += new System.EventHandler(this.folderAToolStripMenuItem_Click);
+            this.folderAToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
             // folderBToolStripMenuItem
             // 
             this.folderBToolStripMenuItem.Name = "folderBToolStripMenuItem";
-            this.folderBToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.folderBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.folderBToolStripMenuItem.Text = "Folder B";
-            this.folderBToolStripMenuItem.Click += new System.EventHandler(this.folderBToolStripMenuItem_Click);
+            this.folderBToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
+            // 
+            // lbItem2
+            // 
+            this.lbItem2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbItem2.FormattingEnabled = true;
+            this.lbItem2.Location = new System.Drawing.Point(3, 43);
+            this.lbItem2.Name = "lbItem2";
+            this.lbItem2.ScrollAlwaysVisible = true;
+            this.lbItem2.Size = new System.Drawing.Size(283, 290);
+            this.lbItem2.TabIndex = 2;
+            // 
+            // flpItem2Buttons
+            // 
+            this.flpItem2Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpItem2Buttons.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flpItem2Buttons.Controls.Add(this.btnSortItem2);
+            this.flpItem2Buttons.Controls.Add(this.btnRemoveItem2);
+            this.flpItem2Buttons.Location = new System.Drawing.Point(3, 3);
+            this.flpItem2Buttons.Name = "flpItem2Buttons";
+            this.flpItem2Buttons.Size = new System.Drawing.Size(283, 34);
+            this.flpItem2Buttons.TabIndex = 3;
+            // 
+            // btnSortItem2
+            // 
+            this.btnSortItem2.Location = new System.Drawing.Point(3, 3);
+            this.btnSortItem2.Name = "btnSortItem2";
+            this.btnSortItem2.Size = new System.Drawing.Size(75, 23);
+            this.btnSortItem2.TabIndex = 1;
+            this.btnSortItem2.Text = "Sort";
+            this.btnSortItem2.UseVisualStyleBackColor = true;
+            // 
+            // btnRemoveItem2
+            // 
+            this.btnRemoveItem2.Location = new System.Drawing.Point(84, 3);
+            this.btnRemoveItem2.Name = "btnRemoveItem2";
+            this.btnRemoveItem2.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveItem2.TabIndex = 2;
+            this.btnRemoveItem2.Text = "Remove";
+            this.btnRemoveItem2.UseVisualStyleBackColor = true;
+            // 
+            // lbResults
+            // 
+            this.lbResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbResults.FormattingEnabled = true;
+            this.lbResults.Location = new System.Drawing.Point(3, 43);
+            this.lbResults.Name = "lbResults";
+            this.lbResults.ScrollAlwaysVisible = true;
+            this.lbResults.Size = new System.Drawing.Size(249, 290);
+            this.lbResults.TabIndex = 2;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(249, 34);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // btnProcessResults
+            // 
+            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
+            this.btnProcessResults.Name = "btnProcessResults";
+            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
+            this.btnProcessResults.TabIndex = 1;
+            this.btnProcessResults.Text = "Process";
+            this.btnProcessResults.UseVisualStyleBackColor = true;
+            // 
+            // lbItem1
+            // 
+            this.lbItem1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbItem1.FormattingEnabled = true;
+            this.lbItem1.Location = new System.Drawing.Point(3, 43);
+            this.lbItem1.Name = "lbItem1";
+            this.lbItem1.ScrollAlwaysVisible = true;
+            this.lbItem1.Size = new System.Drawing.Size(283, 290);
+            this.lbItem1.TabIndex = 1;
             // 
             // PDFPluginApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(897, 359);
+            this.ClientSize = new System.Drawing.Size(1001, 369);
             this.Controls.Add(this.tlpMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -311,17 +271,13 @@
             this.Text = "PDFPluginApp";
             this.tlpMain.ResumeLayout(false);
             this.flp3.ResumeLayout(false);
-            this.flp3.PerformLayout();
-            this.tlp3.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.flp2.ResumeLayout(false);
-            this.tlp2.ResumeLayout(false);
-            this.flpItem2Buttons.ResumeLayout(false);
             this.flp1.ResumeLayout(false);
-            this.tlp1.ResumeLayout(false);
             this.flpItem1Buttons.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.flpItem2Buttons.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,23 +289,20 @@
         private System.Windows.Forms.FlowLayoutPanel flp3;
         private System.Windows.Forms.FlowLayoutPanel flp2;
         private System.Windows.Forms.FlowLayoutPanel flp1;
-        private System.Windows.Forms.TableLayoutPanel tlp3;
-        private System.Windows.Forms.ListBox lbResults;
-        private System.Windows.Forms.TableLayoutPanel tlp2;
-        private System.Windows.Forms.ListBox lbItem2;
-        private System.Windows.Forms.TableLayoutPanel tlp1;
-        private System.Windows.Forms.ListBox lbItem1;
         private System.Windows.Forms.Button btnSortItem1;
-        private System.Windows.Forms.FlowLayoutPanel flpItem2Buttons;
-        private System.Windows.Forms.Button btnSortItem2;
         private System.Windows.Forms.FlowLayoutPanel flpItem1Buttons;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folderAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folderBToolStripMenuItem;
-        private System.Windows.Forms.Button btnRemoveItem2;
         private System.Windows.Forms.Button btnRemoveItem1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnProcessResults;
+        private System.Windows.Forms.ListBox lbResults;
+        private System.Windows.Forms.FlowLayoutPanel flpItem2Buttons;
+        private System.Windows.Forms.Button btnSortItem2;
+        private System.Windows.Forms.Button btnRemoveItem2;
+        private System.Windows.Forms.ListBox lbItem2;
+        private System.Windows.Forms.ListBox lbItem1;
     }
 }
