@@ -1,6 +1,6 @@
 ﻿namespace PDFPlugin
 {
-    partial class PDFUC
+    partial class PDFMultiMergeUC
     {
         /// <summary> 
         /// Required designer variable.
@@ -40,16 +40,16 @@
             this.btnPDF.Name = "btnPDF";
             this.btnPDF.Size = new System.Drawing.Size(109, 35);
             this.btnPDF.TabIndex = 0;
-            this.btnPDF.Text = "Open PDF";
+            this.btnPDF.Text = "Multi PDF Merge";
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
-            // PDFUC
+            // PDFMultiMergeUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnPDF);
-            this.Name = "PDFUC";
+            this.Name = "PDFMultiMergeUC";
             this.Size = new System.Drawing.Size(115, 41);
             this.ResumeLayout(false);
 

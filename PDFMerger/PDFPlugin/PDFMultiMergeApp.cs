@@ -14,11 +14,11 @@ using PdfSharp.Pdf.IO;
 
 namespace PDFPlugin
 {
-    public partial class PDFPluginApp : Form
+    public partial class PDFMultiMergeApp : Form
     {
         private string _resultsPath;
         private OpenFileDialog _ofd;
-        public PDFPluginApp()
+        public PDFMultiMergeApp()
         {
             InitializeComponent();
             lbPreview.Items.Add("Preview");

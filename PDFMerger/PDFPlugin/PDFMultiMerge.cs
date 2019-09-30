@@ -8,9 +8,9 @@ using Plugin;
 
 namespace PDFPlugin
 {
-    public class PDFPlugin : IPlugin
+    public class PDFMultiMerge : IPlugin
     {
-        private static PDFUC _pdfuc;
+        private static PDFMultiMergeUC _pdfuc;
         private readonly string _name = "PDFMerger";
         public string PluginName => _name;
 
@@ -20,7 +20,7 @@ namespace PDFPlugin
             {
                 if (_pdfuc == null)
                 {
-                    _pdfuc = new PDFUC();
+                    _pdfuc = new PDFMultiMergeUC();
                 }
 
                 return _pdfuc;

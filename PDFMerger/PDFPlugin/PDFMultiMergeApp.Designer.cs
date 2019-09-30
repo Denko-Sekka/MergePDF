@@ -1,6 +1,6 @@
 ﻿namespace PDFPlugin
 {
-    partial class PDFPluginApp
+    partial class PDFMultiMergeApp
     {
         /// <summary>
         /// Required designer variable.

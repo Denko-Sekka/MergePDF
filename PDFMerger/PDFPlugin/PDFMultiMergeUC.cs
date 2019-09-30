@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace PDFPlugin
 {
-    public partial class PDFUC : UserControl
+    public partial class PDFMultiMergeUC : UserControl
     {
         // TODO 1a: Complete the mainform for PDFMerging App. FUNCTIONALLY DONE
 
         // singleton of pdfmerging app
-        private static PDFPluginApp _pdfapp;
-        public PDFUC()
+        private static PDFMultiMergeApp _pdfapp;
+        public PDFMultiMergeUC()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace PDFPlugin
             // if it already exists, bring it the front
             if (_pdfapp == null || _pdfapp.IsDisposed)
             {
-                _pdfapp = new PDFPluginApp();
+                _pdfapp = new PDFMultiMergeApp();
                 _pdfapp.Show();
             }
             else

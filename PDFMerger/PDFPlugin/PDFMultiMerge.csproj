@@ -50,19 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PDFPlugin.cs" />
-    <Compile Include="PDFPluginApp.cs">
+    <Compile Include="PDFMultiMerge.cs" />
+    <Compile Include="PDFMultiMergeApp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PDFPluginApp.Designer.cs">
-      <DependentUpon>PDFPluginApp.cs</DependentUpon>
+    <Compile Include="PDFMultiMergeApp.Designer.cs">
+      <DependentUpon>PDFMultiMergeApp.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PDFUC.cs">
+    <Compile Include="PDFMultiMergeUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PDFUC.Designer.cs">
-      <DependentUpon>PDFUC.cs</DependentUpon>
+    <Compile Include="PDFMultiMergeUC.Designer.cs">
+      <DependentUpon>PDFMultiMergeUC.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -72,11 +72,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PDFPluginApp.resx">
-      <DependentUpon>PDFPluginApp.cs</DependentUpon>
+    <EmbeddedResource Include="PDFMultiMergeApp.resx">
+      <DependentUpon>PDFMultiMergeApp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PDFUC.resx">
-      <DependentUpon>PDFUC.cs</DependentUpon>
+    <EmbeddedResource Include="PDFMultiMergeUC.resx">
+      <DependentUpon>PDFMultiMergeUC.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
