@@ -20,6 +20,7 @@ namespace PDFPlugin
         private string _resultsPath;
         private OpenFileDialog _ofd1;
         private OpenFileDialog _ofd2;
+        private PDFMultiMergeHelp _help;
         private string _pathA;
         private string _pathB;
         public PDFMultiMergeApp()
@@ -27,10 +28,10 @@ namespace PDFPlugin
             InitializeComponent();
             _pathA = "";
             _pathB = "";
-            lbPreview.Items.Add("Preview");
+            PreviewFiles();
         }
-        // TODO 1a: implement function to sort items in lbItems1 DONE
-        // TODO 1b: imeplement function to sort items in lbItems2 DONE
+        // TODO 1a: implement function to sort items in lbItems1 HALFDONE
+        // TODO 1b: imeplement function to sort items in lbItems2 HALFDONE
         private void btnSortItem_Click(object sender, EventArgs e)
         {
             if ((sender as Button).Name == btnSortItem1.Name && lbItem1.Items.Count > 0)
@@ -54,11 +55,12 @@ namespace PDFPlugin
                     lbItem2.Items.Add(item);
                 }
             }
+            PreviewFiles();
         }
         // TODO 2a: Implement function for load items to items1, DONE
         // TODO 2b: Implement function for load items to items2, DONE
-        // TODO 8: Implement a way to drag files into lbItems1
-        // TODO 9: Implement a way to drag files into lbItems2
+        // TODO 8a: Implement a way to drag files into lbItems1
+        // TODO 8b: Implement a way to drag files into lbItems2
         // TODO 12: Implement a way to store path(FileNames) and safenames from _ofd
         private void folderToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,7 +104,13 @@ namespace PDFPlugin
         }
 
         // TODO 3a: Implement function for remove items from items1. DONE
-        // TODO 3b: impelment function for remove items from items2 DONE
+        // TODO 3b: impelment function for remove items from items2. DONE
+        /// <summary>
+        /// When the remove button is clicked, check which control caused the event to happen. Remove the item from respective box;
+        /// if the control was from removebutton1, remove item from list box item 1, same goes for item 2
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
             if (lbItem1.SelectedItem != null && (sender as Button).Name == btnRemoveItem1.Name)
@@ -118,6 +126,13 @@ namespace PDFPlugin
         }
 
         // TODO 4: implement function for process button DONE
+        /// <summary>
+        /// When the process button is clicked, check if there are valid items in both boxes
+        /// if it passes the checks, utilize pdfSharp to merge the two files.
+        /// when the merging suceeds, open the resulting folder.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnProcessResults_Click(object sender, EventArgs e)
         {
             // obtain the path for the resource folder
@@ -154,16 +169,17 @@ namespace PDFPlugin
                     string outName = _resultsPath + $"\\{lstA[i].ToString().Split('.')[0]}-{lstB[i].ToString().Split('.')[0]}.pdf";
                     // Save the file
                     one.Save(outName);
-                    // Open the folder using the path
-                    Process.Start("explorer.exe",_resultsPath);
                 }
             }
+            // Open the folder using the path
+            Process.Start("explorer.exe", _resultsPath);
         }
         // TODO 7: create a method to update the UI DONE?
         private void PreviewFiles()
         {
             lbPreview.Items.Clear();
-            lbPreview.Items.Add("Preview");
+            lbPreview.Items.Add("This is a preview of the merging of files.");
+
             int count = Math.Min(lbItem1.Items.Count, lbItem2.Items.Count);
             for (int i = 0; i < count; i++)
             {
@@ -173,22 +189,87 @@ namespace PDFPlugin
             }
         }
 
-        private void lbItem_Click(object sender, EventArgs e)
+        // TODO 12: implement a function to allow user to manually sort items DONE
+        /// <summary>
+        /// When you press the up and down button while we do have something selected, we swap two item locations out
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void lbItem_KeyUp(object sender, KeyEventArgs e)
         {
-            if ((sender as ListBox).Name == lbItem1.Name)
+            if ((sender as ListBox).Name == lbItem1.Name && lbItem1.SelectedItem != null)
             {
+                if (e.KeyCode == Keys.Up && lbItem1.SelectedIndex > 0)
+                {
+                    // perform item swap
+                    int current = lbItem1.SelectedIndex;
+                    int prev = lbItem1.SelectedIndex - 1;
+                    var temp = lbItem1.Items[prev];
+                    lbItem1.Items[prev] = lbItem1.SelectedItem;
+                    lbItem1.Items[current] = temp;
 
+                    // select previous item
+                    lbItem1.SelectedItem = lbItem1.Items[prev];
+                }
+                else if (e.KeyCode == Keys.Down && lbItem1.SelectedIndex < lbItem1.Items.Count - 1)
+                {
+                    // perform item swap
+                    int current = lbItem1.SelectedIndex;
+                    int next = lbItem1.SelectedIndex + 1;
+                    var temp = lbItem1.Items[next];
+                    lbItem1.Items[next] = lbItem1.SelectedItem;
+                    lbItem1.Items[current] = temp;
+
+                    // select previous item
+                    lbItem1.SelectedItem = lbItem1.Items[next];
+                }
             }
-
-            if ((sender as ListBox).Name == lbItem2.Name)
+            if ((sender as ListBox).Name == lbItem2.Name && lbItem2.SelectedItem != null)
             {
+                if (e.KeyCode == Keys.Up && lbItem2.SelectedIndex > 0)
+                {
+                    // perform item swap
+                    int current = lbItem2.SelectedIndex;
+                    int prev = lbItem2.SelectedIndex - 1;
+                    var temp = lbItem2.Items[prev];
+                    lbItem2.Items[prev] = lbItem2.SelectedItem;
+                    lbItem2.Items[current] = temp;
 
+                    // select previous item
+                    lbItem2.SelectedItem = lbItem2.Items[prev];
+                }
+                else if (e.KeyCode == Keys.Down && lbItem2.SelectedIndex < lbItem2.Items.Count - 1)
+                {
+                    // perform item swap
+                    int current = lbItem2.SelectedIndex;
+                    int next = lbItem2.SelectedIndex + 1;
+                    var temp = lbItem2.Items[next];
+                    lbItem2.Items[next] = lbItem2.SelectedItem;
+                    lbItem2.Items[current] = temp;
+                    
+                    // select previous item
+                    lbItem2.SelectedItem = lbItem2.Items[next];
+                }
+            }
+            PreviewFiles();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_help == null || _help.IsDisposed)
+            {
+                _help = new PDFMultiMergeHelp();
+                _help.Show();
+            }
+            else
+            {
+                _help.BringToFront();
             }
         }
         // TODO 5 optional: implement function to sort different ways
         // TODO 6 optional: create a method to update all storage items items
-        // TODO 10: Get the project into an executable
+        // TODO 9: Get the project into an executable
         // https://social.msdn.microsoft.com/Forums/vstudio/en-US/03deaf3d-2dd7-4d3e-a337-084eeb38e791/how-to-generate-exe-file-of-c-windows-forms-app-net-framework-in-visual-studio-2017?forum=winforms
-        // TODO 11: When the mouse hovers over selecteditem, show the full item path.
+        // TODO 10: When the mouse hovers over selecteditem, show the full item path.
     }
 }

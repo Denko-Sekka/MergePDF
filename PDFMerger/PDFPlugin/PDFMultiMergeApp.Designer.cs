@@ -47,6 +47,8 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tlpMain.SuspendLayout();
             this.flp3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -173,7 +175,7 @@
             this.lbItem2.ScrollAlwaysVisible = true;
             this.lbItem2.Size = new System.Drawing.Size(283, 290);
             this.lbItem2.TabIndex = 2;
-            this.lbItem2.Click += new System.EventHandler(this.lbItem_Click);
+            this.lbItem2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbItem_KeyUp);
             // 
             // flp1
             // 
@@ -228,12 +230,13 @@
             this.lbItem1.ScrollAlwaysVisible = true;
             this.lbItem1.Size = new System.Drawing.Size(283, 290);
             this.lbItem1.TabIndex = 1;
-            this.lbItem1.Click += new System.EventHandler(this.lbItem_Click);
+            this.lbItem1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbItem_KeyUp);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1001, 24);
@@ -262,6 +265,19 @@
             this.folderBToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.folderBToolStripMenuItem.Text = "Folder B";
             this.folderBToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(76, 20);
+            this.toolStripMenuItem1.Text = "Instruction";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // PDFMultiMergeApp
             // 
@@ -310,5 +326,7 @@
         private System.Windows.Forms.Button btnRemoveItem2;
         private System.Windows.Forms.ListBox lbItem2;
         private System.Windows.Forms.ListBox lbItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

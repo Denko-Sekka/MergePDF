@@ -57,6 +57,12 @@
     <Compile Include="PDFMultiMergeApp.Designer.cs">
       <DependentUpon>PDFMultiMergeApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="PDFMultiMergeHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDFMultiMergeHelp.Designer.cs">
+      <DependentUpon>PDFMultiMergeHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PDFMultiMergeUC.cs">
       <SubType>UserControl</SubType>
@@ -74,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="PDFMultiMergeApp.resx">
       <DependentUpon>PDFMultiMergeApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDFMultiMergeHelp.resx">
+      <DependentUpon>PDFMultiMergeHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PDFMultiMergeUC.resx">
       <DependentUpon>PDFMultiMergeUC.cs</DependentUpon>
