@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -17,10 +18,15 @@ namespace PDFPlugin
     public partial class PDFMultiMergeApp : Form
     {
         private string _resultsPath;
-        private OpenFileDialog _ofd;
+        private OpenFileDialog _ofd1;
+        private OpenFileDialog _ofd2;
+        private string _pathA;
+        private string _pathB;
         public PDFMultiMergeApp()
         {
             InitializeComponent();
+            _pathA = "";
+            _pathB = "";
             lbPreview.Items.Add("Preview");
         }
         // TODO 1a: implement function to sort items in lbItems1 DONE
@@ -53,38 +59,58 @@ namespace PDFPlugin
         // TODO 2b: Implement function for load items to items2, DONE
         // TODO 8: Implement a way to drag files into lbItems1
         // TODO 9: Implement a way to drag files into lbItems2
+        // TODO 12: Implement a way to store path(FileNames) and safenames from _ofd
         private void folderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (_ofd = new OpenFileDialog())
+            // originally the idea was to use a switch case to check the name of the sender
+            // It doesn't seem to work as limitations in switch cases give 'a constant value is expected' error.
+            // calling indices is too annoying so i
+            if ((sender as ToolStripItem).Name == folderAToolStripMenuItem.Name)
             {
-                _ofd.Filter = "PDF (*.pdf) | *.pdf";
-                _ofd.Title = "Select Files to grab";
-                _ofd.Multiselect = true;
-                if (_ofd.ShowDialog() == DialogResult.OK)
+                using (_ofd1 = new OpenFileDialog())
                 {
-                    if ((sender as ToolStripItem).Name == folderAToolStripMenuItem.Name)
+                    _ofd1.Filter = "PDF (*.pdf) | *.pdf";
+                    _ofd1.Title = "Select Files to grab";
+                    _ofd1.Multiselect = true;
+                    if (_ofd1.ShowDialog() == DialogResult.OK)
                     {
-                        lbItem1.Items.AddRange(_ofd.FileNames);
+                        lbItem1.Items.Clear();
+                        string token = _ofd1.SafeFileNames[0];
+                        _pathA = _ofd1.FileNames[0].Replace(token, "");
+                        lbItem1.Items.AddRange(_ofd1.SafeFileNames);
                     }
+                }
+            }
 
-                    if ((sender as ToolStripItem).Name == folderBToolStripMenuItem.Name)
+            if ((sender as ToolStripItem).Name == folderBToolStripMenuItem.Name)
+            {
+                using (_ofd2 = new OpenFileDialog())
+                {
+                    _ofd2.Filter = "PDF (*.pdf) | *.pdf";
+                    _ofd2.Title = "Select Files to grab";
+                    _ofd2.Multiselect = true;
+                    if (_ofd2.ShowDialog() == DialogResult.OK)
                     {
-                        lbItem2.Items.AddRange(_ofd.FileNames);
+                        lbItem2.Items.Clear();
+                        string token = _ofd2.SafeFileNames[0];
+                        _pathB = _ofd2.FileNames[0].Replace(token, "");
+                        lbItem2.Items.AddRange(_ofd2.SafeFileNames);
                     }
                 }
             }
             PreviewFiles();
         }
+
         // TODO 3a: Implement function for remove items from items1. DONE
         // TODO 3b: impelment function for remove items from items2 DONE
         private void btnRemoveItem_Click(object sender, EventArgs e)
         {
-            if (lbItem1.SelectedItem != null && (sender as Button).Name == "btnRemoveItem1")
+            if (lbItem1.SelectedItem != null && (sender as Button).Name == btnRemoveItem1.Name)
             {
                 lbItem1.Items.Remove(lbItem1.SelectedItem);
             }
 
-            if (lbItem2.SelectedItem != null && (sender as Button).Name == "btnRemoveItem2")
+            if (lbItem2.SelectedItem != null && (sender as Button).Name == btnRemoveItem2.Name)
             {
                 lbItem2.Items.Remove(lbItem2.SelectedItem);
             }
@@ -97,7 +123,6 @@ namespace PDFPlugin
             // obtain the path for the resource folder
             string filePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Results");
             _resultsPath = filePath;
-            lbPreview.Items.Clear();
             if (lbItem1.Items.Count <= 0 || lbItem2.Items.Count <= 0)
             {
                 MessageBox.Show("No items in one of the boxes!");
@@ -118,19 +143,19 @@ namespace PDFPlugin
             var lstB = lbItem2.Items;
             for (int i = 0; i < count; i++)
             {
-                string nameA = lstA[i].ToString().Split('\\').Last().Split('.')[0];
-                string nameB = lstB[i].ToString().Split('\\').Last().Split('.')[0];
-                using (PdfDocument one = PdfReader.Open(lstA[i].ToString(), PdfDocumentOpenMode.Import))
-                using (PdfDocument two = PdfReader.Open(lstB[i].ToString(), PdfDocumentOpenMode.Import))
+                using (PdfDocument one = PdfReader.Open($"{_pathA}\\{lstA[i]}", PdfDocumentOpenMode.Import))
+                using (PdfDocument two = PdfReader.Open($"{_pathB}\\{lstB[i]}", PdfDocumentOpenMode.Import))
                 {
                     foreach (var twoPage in two.Pages)
                     {
                         one.AddPage(twoPage);
                     }
 
-                    string outName = _resultsPath + $"\\{nameA}-{nameB}.pdf";
+                    string outName = _resultsPath + $"\\{lstA[i].ToString().Split('.')[0]}-{lstB[i].ToString().Split('.')[0]}.pdf";
+                    // Save the file
                     one.Save(outName);
-                    lbPreview.Items.Add(outName);
+                    // Open the folder using the path
+                    Process.Start("explorer.exe",_resultsPath);
                 }
             }
         }
@@ -147,8 +172,21 @@ namespace PDFPlugin
                 lbPreview.Items.Add($"{nameA}-{nameB}.pdf");
             }
         }
+
+        private void lbItem_Click(object sender, EventArgs e)
+        {
+            if ((sender as ListBox).Name == lbItem1.Name)
+            {
+
+            }
+
+            if ((sender as ListBox).Name == lbItem2.Name)
+            {
+
+            }
+        }
         // TODO 5 optional: implement function to sort different ways
-        // TODO 6 optional: create a method to update all internal items
+        // TODO 6 optional: create a method to update all storage items items
         // TODO 10: Get the project into an executable
         // https://social.msdn.microsoft.com/Forums/vstudio/en-US/03deaf3d-2dd7-4d3e-a337-084eeb38e791/how-to-generate-exe-file-of-c-windows-forms-app-net-framework-in-visual-studio-2017?forum=winforms
         // TODO 11: When the mouse hovers over selecteditem, show the full item path.
