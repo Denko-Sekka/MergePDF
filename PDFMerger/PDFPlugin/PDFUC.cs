@@ -12,7 +12,7 @@ namespace PDFPlugin
 {
     public partial class PDFUC : UserControl
     {
-        // TODO 1a: Complete the mainform for PDFMerging App
+        // TODO 1a: Complete the mainform for PDFMerging App. FUNCTIONALLY DONE
 
         // singleton of pdfmerging app
         private static PDFPluginApp _pdfapp;

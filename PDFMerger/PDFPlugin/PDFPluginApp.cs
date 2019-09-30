@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfSharp;
+using PdfSharp.Pdf;
+using PdfSharp.Pdf.IO;
 
 namespace PDFPlugin
 {
@@ -18,6 +21,7 @@ namespace PDFPlugin
         public PDFPluginApp()
         {
             InitializeComponent();
+            lbPreview.Items.Add("Preview");
         }
         // TODO 1a: implement function to sort items in lbItems1 DONE
         // TODO 1b: imeplement function to sort items in lbItems2 DONE
@@ -69,6 +73,7 @@ namespace PDFPlugin
                     }
                 }
             }
+            PreviewFiles();
         }
         // TODO 3a: Implement function for remove items from items1. DONE
         // TODO 3b: impelment function for remove items from items2 DONE
@@ -83,15 +88,16 @@ namespace PDFPlugin
             {
                 lbItem2.Items.Remove(lbItem2.SelectedItem);
             }
+            PreviewFiles();
         }
 
-        // TODO 4: implement function for process button
+        // TODO 4: implement function for process button DONE
         private void btnProcessResults_Click(object sender, EventArgs e)
         {
             // obtain the path for the resource folder
             string filePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "Results");
             _resultsPath = filePath;
-
+            lbPreview.Items.Clear();
             if (lbItem1.Items.Count <= 0 || lbItem2.Items.Count <= 0)
             {
                 MessageBox.Show("No items in one of the boxes!");
@@ -100,12 +106,51 @@ namespace PDFPlugin
 
             if (lbItem1.Items.Count != lbItem2.Items.Count)
             {
-                MessageBox.Show(
-                    "The number of items between the two boxes do not match, items with no matching partner will be ignored!");
+                DialogResult result = MessageBox.Show("The number of items do not match, only files with a matching partner will be matched! Are you sure you want to continue?", "Warning",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            int count = Math.Min(lbItem1.Items.Count, lbItem2.Items.Count);
+            var lstA = lbItem1.Items;
+            var lstB = lbItem2.Items;
+            for (int i = 0; i < count; i++)
+            {
+                string nameA = lstA[i].ToString().Split('\\').Last().Split('.')[0];
+                string nameB = lstB[i].ToString().Split('\\').Last().Split('.')[0];
+                using (PdfDocument one = PdfReader.Open(lstA[i].ToString(), PdfDocumentOpenMode.Import))
+                using (PdfDocument two = PdfReader.Open(lstB[i].ToString(), PdfDocumentOpenMode.Import))
+                {
+                    foreach (var twoPage in two.Pages)
+                    {
+                        one.AddPage(twoPage);
+                    }
+
+                    string outName = _resultsPath + $"\\{nameA}-{nameB}.pdf";
+                    one.Save(outName);
+                    lbPreview.Items.Add(outName);
+                }
+            }
+        }
+        // TODO 7: create a method to update the UI DONE?
+        private void PreviewFiles()
+        {
+            lbPreview.Items.Clear();
+            lbPreview.Items.Add("Preview");
+            int count = Math.Min(lbItem1.Items.Count, lbItem2.Items.Count);
+            for (int i = 0; i < count; i++)
+            {
+                string nameA = lbItem1.Items[i].ToString().Split('\\').Last().Split('.')[0];
+                string nameB = lbItem2.Items[i].ToString().Split('\\').Last().Split('.')[0];
+                lbPreview.Items.Add($"{nameA}-{nameB}.pdf");
             }
         }
         // TODO 5 optional: implement function to sort different ways
-        // TODO 6: create a method to update all the items
-        // TODO 7: create a method to update the UI
+        // TODO 6 optional: create a method to update all internal items
+        // TODO 10: Get the project into an executable
+        // https://social.msdn.microsoft.com/Forums/vstudio/en-US/03deaf3d-2dd7-4d3e-a337-084eeb38e791/how-to-generate-exe-file-of-c-windows-forms-app-net-framework-in-visual-studio-2017?forum=winforms
+        // TODO 11: When the mouse hovers over selecteditem, show the full item path.
     }
 }

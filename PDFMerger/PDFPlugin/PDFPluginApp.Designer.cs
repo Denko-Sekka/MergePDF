@@ -43,7 +43,7 @@
             this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSortItem2 = new System.Windows.Forms.Button();
             this.btnRemoveItem2 = new System.Windows.Forms.Button();
-            this.lbResults = new System.Windows.Forms.ListBox();
+            this.lbPreview = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnProcessResults = new System.Windows.Forms.Button();
             this.lbItem1 = new System.Windows.Forms.ListBox();
@@ -80,7 +80,7 @@
             // 
             this.flp3.BackColor = System.Drawing.SystemColors.Control;
             this.flp3.Controls.Add(this.flowLayoutPanel1);
-            this.flp3.Controls.Add(this.lbResults);
+            this.flp3.Controls.Add(this.lbPreview);
             this.flp3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp3.Location = new System.Drawing.Point(703, 3);
             this.flp3.Name = "flp3";
@@ -217,16 +217,17 @@
             this.btnRemoveItem2.UseVisualStyleBackColor = true;
             this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
-            // lbResults
+            // lbPreview
             // 
-            this.lbResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lbPreview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbResults.FormattingEnabled = true;
-            this.lbResults.Location = new System.Drawing.Point(3, 43);
-            this.lbResults.Name = "lbResults";
-            this.lbResults.ScrollAlwaysVisible = true;
-            this.lbResults.Size = new System.Drawing.Size(249, 290);
-            this.lbResults.TabIndex = 2;
+            this.lbPreview.DisplayMember = "Preview";
+            this.lbPreview.FormattingEnabled = true;
+            this.lbPreview.Location = new System.Drawing.Point(3, 43);
+            this.lbPreview.Name = "lbPreview";
+            this.lbPreview.ScrollAlwaysVisible = true;
+            this.lbPreview.Size = new System.Drawing.Size(249, 290);
+            this.lbPreview.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
@@ -301,7 +302,7 @@
         private System.Windows.Forms.Button btnRemoveItem1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button btnProcessResults;
-        private System.Windows.Forms.ListBox lbResults;
+        private System.Windows.Forms.ListBox lbPreview;
         private System.Windows.Forms.FlowLayoutPanel flpItem2Buttons;
         private System.Windows.Forms.Button btnSortItem2;
         private System.Windows.Forms.Button btnRemoveItem2;
