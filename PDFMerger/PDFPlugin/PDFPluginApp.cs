@@ -19,7 +19,6 @@ namespace PDFPlugin
         {
             InitializeComponent();
         }
-
         // TODO 1a: implement function to sort items in lbItems1 DONE
         // TODO 1b: imeplement function to sort items in lbItems2 DONE
         private void btnSortItem_Click(object sender, EventArgs e)
@@ -46,7 +45,6 @@ namespace PDFPlugin
                 }
             }
         }
-
         // TODO 2a: Implement function for load items to items1, DONE
         // TODO 2b: Implement function for load items to items2, DONE
         // TODO 8: Implement a way to drag files into lbItems1
@@ -87,8 +85,6 @@ namespace PDFPlugin
             }
         }
 
-        
-
         // TODO 4: implement function for process button
         private void btnProcessResults_Click(object sender, EventArgs e)
         {
@@ -107,8 +103,6 @@ namespace PDFPlugin
                 MessageBox.Show(
                     "The number of items between the two boxes do not match, items with no matching partner will be ignored!");
             }
-            
-
         }
         // TODO 5 optional: implement function to sort different ways
         // TODO 6: create a method to update all the items

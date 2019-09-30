@@ -205,6 +205,7 @@
             this.btnSortItem2.TabIndex = 1;
             this.btnSortItem2.Text = "Sort";
             this.btnSortItem2.UseVisualStyleBackColor = true;
+            this.btnSortItem2.Click += new System.EventHandler(this.btnSortItem_Click);
             // 
             // btnRemoveItem2
             // 
@@ -214,6 +215,7 @@
             this.btnRemoveItem2.TabIndex = 2;
             this.btnRemoveItem2.Text = "Remove";
             this.btnRemoveItem2.UseVisualStyleBackColor = true;
+            this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
             // lbResults
             // 
@@ -245,6 +247,7 @@
             this.btnProcessResults.TabIndex = 1;
             this.btnProcessResults.Text = "Process";
             this.btnProcessResults.UseVisualStyleBackColor = true;
+            this.btnProcessResults.Click += new System.EventHandler(this.btnProcessResults_Click);
             // 
             // lbItem1
             // 
