@@ -30,31 +30,31 @@
         {
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.flp3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnProcessResults = new System.Windows.Forms.Button();
+            this.lbPreview = new System.Windows.Forms.ListBox();
             this.flp2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSortItem2 = new System.Windows.Forms.Button();
+            this.btnRemoveItem2 = new System.Windows.Forms.Button();
+            this.lbItem2 = new System.Windows.Forms.ListBox();
             this.flp1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flpItem1Buttons = new System.Windows.Forms.FlowLayoutPanel();
             this.btnSortItem1 = new System.Windows.Forms.Button();
             this.btnRemoveItem1 = new System.Windows.Forms.Button();
+            this.lbItem1 = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folderBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbItem2 = new System.Windows.Forms.ListBox();
-            this.flpItem2Buttons = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSortItem2 = new System.Windows.Forms.Button();
-            this.btnRemoveItem2 = new System.Windows.Forms.Button();
-            this.lbPreview = new System.Windows.Forms.ListBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnProcessResults = new System.Windows.Forms.Button();
-            this.lbItem1 = new System.Windows.Forms.ListBox();
             this.tlpMain.SuspendLayout();
             this.flp3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.flp2.SuspendLayout();
+            this.flpItem2Buttons.SuspendLayout();
             this.flp1.SuspendLayout();
             this.flpItem1Buttons.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.flpItem2Buttons.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tlpMain
@@ -87,6 +87,39 @@
             this.flp3.Size = new System.Drawing.Size(295, 339);
             this.flp3.TabIndex = 3;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(249, 34);
+            this.flowLayoutPanel1.TabIndex = 4;
+            // 
+            // btnProcessResults
+            // 
+            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
+            this.btnProcessResults.Name = "btnProcessResults";
+            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
+            this.btnProcessResults.TabIndex = 1;
+            this.btnProcessResults.Text = "Process";
+            this.btnProcessResults.UseVisualStyleBackColor = true;
+            this.btnProcessResults.Click += new System.EventHandler(this.btnProcessResults_Click);
+            // 
+            // lbPreview
+            // 
+            this.lbPreview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPreview.DisplayMember = "Preview";
+            this.lbPreview.FormattingEnabled = true;
+            this.lbPreview.Location = new System.Drawing.Point(3, 43);
+            this.lbPreview.Name = "lbPreview";
+            this.lbPreview.ScrollAlwaysVisible = true;
+            this.lbPreview.Size = new System.Drawing.Size(249, 290);
+            this.lbPreview.TabIndex = 2;
+            // 
             // flp2
             // 
             this.flp2.BackColor = System.Drawing.SystemColors.Control;
@@ -97,6 +130,49 @@
             this.flp2.Name = "flp2";
             this.flp2.Size = new System.Drawing.Size(294, 339);
             this.flp2.TabIndex = 2;
+            // 
+            // flpItem2Buttons
+            // 
+            this.flpItem2Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flpItem2Buttons.BackColor = System.Drawing.SystemColors.Highlight;
+            this.flpItem2Buttons.Controls.Add(this.btnSortItem2);
+            this.flpItem2Buttons.Controls.Add(this.btnRemoveItem2);
+            this.flpItem2Buttons.Location = new System.Drawing.Point(3, 3);
+            this.flpItem2Buttons.Name = "flpItem2Buttons";
+            this.flpItem2Buttons.Size = new System.Drawing.Size(283, 34);
+            this.flpItem2Buttons.TabIndex = 3;
+            // 
+            // btnSortItem2
+            // 
+            this.btnSortItem2.Location = new System.Drawing.Point(3, 3);
+            this.btnSortItem2.Name = "btnSortItem2";
+            this.btnSortItem2.Size = new System.Drawing.Size(75, 23);
+            this.btnSortItem2.TabIndex = 1;
+            this.btnSortItem2.Text = "Sort";
+            this.btnSortItem2.UseVisualStyleBackColor = true;
+            this.btnSortItem2.Click += new System.EventHandler(this.btnSortItem_Click);
+            // 
+            // btnRemoveItem2
+            // 
+            this.btnRemoveItem2.Location = new System.Drawing.Point(84, 3);
+            this.btnRemoveItem2.Name = "btnRemoveItem2";
+            this.btnRemoveItem2.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveItem2.TabIndex = 2;
+            this.btnRemoveItem2.Text = "Remove";
+            this.btnRemoveItem2.UseVisualStyleBackColor = true;
+            this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem_Click);
+            // 
+            // lbItem2
+            // 
+            this.lbItem2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbItem2.FormattingEnabled = true;
+            this.lbItem2.Location = new System.Drawing.Point(3, 43);
+            this.lbItem2.Name = "lbItem2";
+            this.lbItem2.ScrollAlwaysVisible = true;
+            this.lbItem2.Size = new System.Drawing.Size(283, 290);
+            this.lbItem2.TabIndex = 2;
             // 
             // flp1
             // 
@@ -141,6 +217,17 @@
             this.btnRemoveItem1.UseVisualStyleBackColor = true;
             this.btnRemoveItem1.Click += new System.EventHandler(this.btnRemoveItem_Click);
             // 
+            // lbItem1
+            // 
+            this.lbItem1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbItem1.FormattingEnabled = true;
+            this.lbItem1.Location = new System.Drawing.Point(3, 43);
+            this.lbItem1.Name = "lbItem1";
+            this.lbItem1.ScrollAlwaysVisible = true;
+            this.lbItem1.Size = new System.Drawing.Size(283, 290);
+            this.lbItem1.TabIndex = 1;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -163,105 +250,18 @@
             // folderAToolStripMenuItem
             // 
             this.folderAToolStripMenuItem.Name = "folderAToolStripMenuItem";
-            this.folderAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.folderAToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.folderAToolStripMenuItem.Text = "Folder A";
             this.folderAToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
             // folderBToolStripMenuItem
             // 
             this.folderBToolStripMenuItem.Name = "folderBToolStripMenuItem";
-            this.folderBToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.folderBToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.folderBToolStripMenuItem.Text = "Folder B";
             this.folderBToolStripMenuItem.Click += new System.EventHandler(this.folderToolStripMenuItem_Click);
             // 
-            // lbItem2
-            // 
-            this.lbItem2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbItem2.FormattingEnabled = true;
-            this.lbItem2.Location = new System.Drawing.Point(3, 43);
-            this.lbItem2.Name = "lbItem2";
-            this.lbItem2.ScrollAlwaysVisible = true;
-            this.lbItem2.Size = new System.Drawing.Size(283, 290);
-            this.lbItem2.TabIndex = 2;
-            // 
-            // flpItem2Buttons
-            // 
-            this.flpItem2Buttons.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flpItem2Buttons.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flpItem2Buttons.Controls.Add(this.btnSortItem2);
-            this.flpItem2Buttons.Controls.Add(this.btnRemoveItem2);
-            this.flpItem2Buttons.Location = new System.Drawing.Point(3, 3);
-            this.flpItem2Buttons.Name = "flpItem2Buttons";
-            this.flpItem2Buttons.Size = new System.Drawing.Size(283, 34);
-            this.flpItem2Buttons.TabIndex = 3;
-            // 
-            // btnSortItem2
-            // 
-            this.btnSortItem2.Location = new System.Drawing.Point(3, 3);
-            this.btnSortItem2.Name = "btnSortItem2";
-            this.btnSortItem2.Size = new System.Drawing.Size(75, 23);
-            this.btnSortItem2.TabIndex = 1;
-            this.btnSortItem2.Text = "Sort";
-            this.btnSortItem2.UseVisualStyleBackColor = true;
-            this.btnSortItem2.Click += new System.EventHandler(this.btnSortItem_Click);
-            // 
-            // btnRemoveItem2
-            // 
-            this.btnRemoveItem2.Location = new System.Drawing.Point(84, 3);
-            this.btnRemoveItem2.Name = "btnRemoveItem2";
-            this.btnRemoveItem2.Size = new System.Drawing.Size(75, 23);
-            this.btnRemoveItem2.TabIndex = 2;
-            this.btnRemoveItem2.Text = "Remove";
-            this.btnRemoveItem2.UseVisualStyleBackColor = true;
-            this.btnRemoveItem2.Click += new System.EventHandler(this.btnRemoveItem_Click);
-            // 
-            // lbPreview
-            // 
-            this.lbPreview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbPreview.DisplayMember = "Preview";
-            this.lbPreview.FormattingEnabled = true;
-            this.lbPreview.Location = new System.Drawing.Point(3, 43);
-            this.lbPreview.Name = "lbPreview";
-            this.lbPreview.ScrollAlwaysVisible = true;
-            this.lbPreview.Size = new System.Drawing.Size(249, 290);
-            this.lbPreview.TabIndex = 2;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.flowLayoutPanel1.Controls.Add(this.btnProcessResults);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(249, 34);
-            this.flowLayoutPanel1.TabIndex = 4;
-            // 
-            // btnProcessResults
-            // 
-            this.btnProcessResults.Location = new System.Drawing.Point(3, 3);
-            this.btnProcessResults.Name = "btnProcessResults";
-            this.btnProcessResults.Size = new System.Drawing.Size(75, 23);
-            this.btnProcessResults.TabIndex = 1;
-            this.btnProcessResults.Text = "Process";
-            this.btnProcessResults.UseVisualStyleBackColor = true;
-            this.btnProcessResults.Click += new System.EventHandler(this.btnProcessResults_Click);
-            // 
-            // lbItem1
-            // 
-            this.lbItem1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbItem1.FormattingEnabled = true;
-            this.lbItem1.Location = new System.Drawing.Point(3, 43);
-            this.lbItem1.Name = "lbItem1";
-            this.lbItem1.ScrollAlwaysVisible = true;
-            this.lbItem1.Size = new System.Drawing.Size(283, 290);
-            this.lbItem1.TabIndex = 1;
-            // 
-            // PDFPluginApp
+            // PDFMultiMergeApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,18 +270,18 @@
             this.Controls.Add(this.tlpMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "PDFPluginApp";
+            this.Name = "PDFMultiMergeApp";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "PDFPluginApp";
+            this.Text = "PDF Multi Merge";
             this.tlpMain.ResumeLayout(false);
             this.flp3.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.flp2.ResumeLayout(false);
+            this.flpItem2Buttons.ResumeLayout(false);
             this.flp1.ResumeLayout(false);
             this.flpItem1Buttons.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.flpItem2Buttons.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

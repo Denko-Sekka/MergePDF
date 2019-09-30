@@ -30,8 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PdfSharp, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.50.5147\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +51,36 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PDFSingleMerge.cs" />
+    <Compile Include="PDFSingleMergeApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PDFSingleMergeApp.Designer.cs">
+      <DependentUpon>PDFSingleMergeApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PDFSingleMergeUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PDFSingleMergeUC.Designer.cs">
+      <DependentUpon>PDFSingleMergeUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\PluginInterface.csproj">
+      <Project>{719C4E77-BD0C-4CB9-A404-783E73A8FF90}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PDFSingleMergeAPP.resx">
+      <DependentUpon>PDFSingleMergeApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PDFSingleMergeUC.resx">
+      <DependentUpon>PDFSingleMergeUC.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
