@@ -18,11 +18,11 @@ namespace PDFPlugin
     public partial class PDFMultiMergeApp : Form
     {
         private string _resultsPath;
-        private OpenFileDialog _ofd1;
-        private OpenFileDialog _ofd2;
-        private PDFMultiMergeHelp _help;
-        private string _pathA;
-        private string _pathB;
+        private static OpenFileDialog _ofd1;
+        private static OpenFileDialog _ofd2;
+        private static PDFMultiMergeHelp _help;
+        private static string _pathA;
+        private static string _pathB;
         public PDFMultiMergeApp()
         {
             InitializeComponent();

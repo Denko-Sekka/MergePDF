@@ -17,7 +17,7 @@ namespace PDFSingleMerger
         {
             InitializeComponent();
         }
-        // TODO 1: Implement a button user control button event that launches a new form
+        // TODO 1: Implement a button user control button event that launches a new form DONE
         private void btnSingleMergeUC_Click(object sender, EventArgs e)
         {
             if (_pdfApp == null || _pdfApp.IsDisposed)
